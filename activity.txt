@@ -8,3 +8,4 @@ Update metrics logic on 2025-01-20
 Adjust thresholds for alerts on 2025-01-20
 Refactor helper functions on 2025-01-20
 Adjust thresholds for alerts on 2025-01-23
+Update metrics logic on 2025-01-23
