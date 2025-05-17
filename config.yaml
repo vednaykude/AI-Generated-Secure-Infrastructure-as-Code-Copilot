@@ -1,0 +1,47 @@
+# GitHub Configuration
+github:
+  # Optional: Configure as GitHub App
+  app_id: ""
+  private_key: ""
+  webhook_secret: ""
+  
+  # Required if not using GitHub App
+  token: ""
+
+# OpenAI Configuration
+openai:
+  model: "gpt-4-turbo-preview"
+  temperature: 0.7
+  max_tokens: 4000
+
+# Security Review Configuration
+security:
+  # Minimum severity level to report (LOW, MEDIUM, HIGH, CRITICAL)
+  min_severity: "LOW"
+  
+  # Enable automatic fix generation
+  auto_fix: true
+  
+  # Checkov configuration
+  checkov:
+    skip_checks: []
+    frameworks: ["terraform", "cloudformation", "kubernetes"]
+    
+  # Custom policies (optional)
+  custom_policies:
+    - name: "require-encryption"
+      description: "All data must be encrypted at rest"
+      severity: "HIGH"
+      resource_types: ["aws_s3_bucket", "aws_ebs_volume"]
+      
+    - name: "require-tags"
+      description: "All resources must have required tags"
+      severity: "MEDIUM"
+      required_tags: ["Environment", "Owner", "Project"]
+
+# Application Configuration
+app:
+  debug: false
+  environment: "production"
+  log_level: "INFO"
+  port: 8000 
