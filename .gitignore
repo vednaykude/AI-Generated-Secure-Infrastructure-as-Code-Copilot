@@ -22,15 +22,52 @@ wheels/
 
 # Virtual Environment
 venv/
-venv311/
 ENV/
 env/
+.env
 
 # IDE
 .idea/
 .vscode/
 *.swp
 *.swo
+.DS_Store
+
+# Project specific
+*.tfplan
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+cost_optimizations_*.json
+cost_optimizations_*.csv
+cost_optimizations_*.yaml
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+coverage.xml
+*.cover
+
+# Distribution
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Terraform
+.terraformrc
+terraform.rc
 
 # OS
 .DS_Store
