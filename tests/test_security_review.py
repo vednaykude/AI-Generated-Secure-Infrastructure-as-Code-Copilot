@@ -8,11 +8,11 @@ load_dotenv()
 
 # Set up test environment variables, using actual tokens if available
 if not os.getenv("GITHUB_TOKEN"):
-    os.environ["GITHUB_TOKEN"] = "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"
+    os.environ["GITHUB_TOKEN"] = "INSERT KEY HERE"
 if not os.getenv("GITHUB_WEBHOOK_SECRET"):
-    os.environ["GITHUB_WEBHOOK_SECRET"] = "685947e52e52c473b403fcc6f572c7f19955c4d3"
+    os.environ["GITHUB_WEBHOOK_SECRET"] = "INSERT KEY HERE"
 if not os.getenv("OPENAI_API_KEY"):
-    os.environ["OPENAI_API_KEY"] = "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"
+    os.environ["OPENAI_API_KEY"] = "INSERT KEY HERE"
 
 from fastapi.testclient import TestClient
 from app.main import app
