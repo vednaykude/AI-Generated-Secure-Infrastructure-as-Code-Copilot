@@ -56,6 +56,40 @@ A powerful command-line tool for managing, validating, and optimizing Infrastruc
 - Git operations integration
 - Cost estimation and optimization
 
+### System Diagram:
+
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│  User Request   │────▶│ CostEstimator   │────▶│  AWS Pricing    │
+│                 │     │                 │     │    API          │
+└─────────────────┘     └────────┬────────┘     └─────────────────┘
+                                 │
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │                 │
+                        │    Bedrock      │
+                        │                 │
+                        └────────┬────────┘
+                                 │
+                                 │
+                                 ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │                 │     │                 │
+                        │  Terraform      │────▶│  Checkov        │
+                        │  Generator      │     │  Security       │
+                        │                 │     │  Scanner        │
+                        └────────┬────────┘     └─────────────────┘
+                                 │
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │                 │
+                        │  Output Formats │
+                        │  (JSON/CSV/YAML)│
+                        │                 │
+                        └─────────────────┘ 
+
 ## Installation
 
 ```bash
